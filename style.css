@@ -1,0 +1,119 @@
+.pop-up {
+  box-sizing: content-box;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 0.5em;
+  height: fit-content;
+  position: relative;
+  text-align: center;
+  min-height: 400px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.pop-up::after {
+  content: "\00D7";
+  font-size: large;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.pop-up-container {
+  position: fixed;
+  margin: 12px;
+  width: 350px;
+}
+
+.pop-up-container[data-position="right"] {
+  top: 0;
+  right: 0;
+}
+.pop-up-container[data-position="left"] {
+  top: 0;
+  left: 0;
+}
+
+.pop-up-container[data-position="center"] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  vertical-align: top;
+}
+
+.title[data-size="large"] {
+  font-size: x-large;
+}
+
+.title[data-size="medium"] {
+  font-size: larger;
+}
+
+.title[data-size="small"] {
+  font-size: large;
+}
+
+.author-label {
+  float: left;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.author {
+  margin-left: 5px;
+}
+
+.wrap[data-size="large"] {
+  font-size: x-large;
+}
+
+.wrap[data-size="medium"] {
+  font-size: larger;
+}
+
+.wrap[data-size="small"] {
+  font-size: large;
+}
+
+.summary {
+  width: 300px;
+  word-wrap: break-word;
+  text-align: left;
+  margin-left: 5px;
+  border: 0.5px solid #333;
+  white-space: normal;
+}
+
+.date,
+.language {
+  margin-left: 5px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.rate {
+  margin-left: 5px;
+  margin-top: -3px;
+}
+
+.rate a {
+  opacity: 50%;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.rate:hover a {
+  opacity: 100%;
+}
+
+.rate a:hover ~ a {
+  opacity: 50%;
+}
